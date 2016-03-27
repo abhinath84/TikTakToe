@@ -10,12 +10,16 @@
 Game::Game()
 :GLWidget()
 {
-  // TODO Auto-generated constructor stub
-
 }
 
-Game::~Game() {
-  // TODO Auto-generated destructor stub
+Game::Game(int win_x, int win_y, int win_w,
+            int win_h, const string &win_title)
+:GLWidget(win_x, win_y, win_w, win_h, win_title)
+{
+}
+
+Game::~Game()
+{
 }
 
 void Game::displayGL()
@@ -24,6 +28,9 @@ void Game::displayGL()
   //  This happens by replacing all the contents of the frame
   //  buffer by the clear color
   glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+
+  //  Set shading model
+  glShadeModel(GL_FLAT);
 
   //drawSpiral_3D();
   //drawLines_3D();

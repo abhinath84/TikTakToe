@@ -12,7 +12,7 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-  GLWidget *gameWidget = new Game();
+  GLWidget *gameWidget = new Game(100, 50, 800, 600, "TikTakToe Game");
   gameWidget->mainloopGL(argc, argv);
 
   return(0);

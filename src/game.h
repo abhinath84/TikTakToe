@@ -28,6 +28,8 @@ typedef Color<GLint>    Color3i;
 class Game: public GLWidget {
 public:
   Game();
+  Game(int win_x, int win_y, int win_w,
+        int win_h, const string &win_title);
   ~Game();
 
   virtual void displayGL();
